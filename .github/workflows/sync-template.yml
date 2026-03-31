@@ -1,8 +1,11 @@
 name: Sync template
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  # Scheduled workflow
+  # schedule:
+  #   - cron: "0 0 * * *"
+  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   repo-sync:
