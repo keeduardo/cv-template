@@ -75,7 +75,7 @@ properties:
         type: array
         items:
           type: object
-          required: [name, positions, tasks, technologies]
+          required: [name, positions]
           additionalProperties: false
           properties:
             name:

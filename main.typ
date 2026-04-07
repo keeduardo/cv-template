@@ -110,7 +110,7 @@
       #smallcaps(general.jobTitle)
     ]
 
-    #if "profile" in data and data.profile != none [
+    #if "profile" in data [
       #v(4pt)
 
       #section-title(data.profile.title)
@@ -172,7 +172,7 @@
         columns: (25%, 75%),
         gutter: 10pt,
         ..company.positions.map(position => (
-          if "to" in position and position.to != none and position.to != "" [
+          if "to" in position [
             #position.from \- #position.to
           ] else [
             #position.from
@@ -181,17 +181,21 @@
         )).flatten(),
       )
 
-      #text(weight: "bold")[
-        #data.tasks:
-      ]
-      #for task in company.tasks [
-        - #task
+      #if "tasks" in data [
+        #text(weight: "bold")[
+          #data.tasks:
+        ]
+        #for task in company.tasks [
+          - #task
+        ]
       ]
 
-      #text(weight: "bold")[
-        #data.technologies:
+      #if "technologies" in data [
+        #text(weight: "bold")[
+          #data.technologies:
+        ]
+        #company.technologies.join(", ")
       ]
-      #company.technologies.join(", ")
 
       #v(4pt)
     ]
