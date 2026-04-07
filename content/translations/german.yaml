@@ -62,4 +62,14 @@ education:
       title: Master of Lore, Antike Schriften & Kartographie
       institution: College of Celoneth
       grading: 'Note: 1,20'
+      projects:
+        - Erstellung einer vergleichenden Analyse der Elbensprachen des Dritten
+          Zeitalters auf Basis von über 200 Primärquellen.
+        - Rekonstruktion einer verlorenen Karte der Beleriand-Küste anhand
+          fragmentierter númenórischer Seefahrtskarten.
+    - from: 09/2010
+      to: 07/2014
+      title: Bachelor of History, Ältere Zeitalter
+      institution: Akademie von Minas Anor
+      grading: 'Note: 1,80'
 easterEgg: Du hast das erste Easter Egg gefunden. Glückwunsch!

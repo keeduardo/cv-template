@@ -61,4 +61,14 @@ education:
       title: Master of Lore, Ancient Scripts & Cartography
       institution: College of Celoneth
       grading: 'Grade: 1.20'
+      projects:
+        - Compiled a comparative analysis of Elvish dialects across the Third Age,
+          spanning over 200 primary sources.
+        - Reconstructed a lost map of the Beleriand coastline using fragmented
+          Númenórean seafaring charts.
+    - from: 09/2010
+      to: 07/2014
+      title: Bachelor of History, Elder Ages
+      institution: Academy of Minas Anor
+      grading: 'Grade: 1.80'
 easterEgg: You found the first Easter egg. Congratulations!
