@@ -110,11 +110,13 @@
       #smallcaps(general.jobTitle)
     ]
 
-    #v(4pt)
+    #if "profile" in data and data.profile != none [
+      #v(4pt)
 
-    #section-title(data.profile.title)
+      #section-title(data.profile.title)
 
-    #data.profile.text
+      #data.profile.text
+    ]
   ],
 
   [
