@@ -91,7 +91,8 @@
   columns: (22%, 76%),
   gutter: 2%,
   [
-      #rect(
+    #if "profilePicturePlaceholder" not in general or not general.profilePicturePlaceholder {
+      rect(
         inset: 0pt,
         stroke: 2pt + primaryColor,
       )[
@@ -100,6 +101,7 @@
           width: 90%,
         )
       ]
+    }
   ],
 
   [
