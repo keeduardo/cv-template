@@ -48,6 +48,15 @@ Used in a repository created from this template to pull in upstream changes. It 
 `workflow_dispatch`, or you can uncomment the `schedule` block to run it automatically on a cron schedule. It opens a
 pull request with any changes from this template repository, allowing you to review and merge them selectively.
 
+> **Note:** For this workflow to be able to open pull requests, you need to allow GitHub Actions to create and approve
+> pull requests. This can be enabled under `https://github.com/<user>/<repository>/settings/actions` in the "Workflow
+> permissions" section.
+
+### Validate (`validate.yml`)
+
+Triggered on every push and pull request. It validates all translation YAML files in `content/translations/` against
+the JSON schema defined in `content/translations-schema.yaml`, ensuring that the content structure is correct.
+
 ## Licensing
 
 This repository uses multiple licenses:
