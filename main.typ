@@ -124,6 +124,26 @@
 
       #data.profile.text
     ]
+
+    #if "coreSkills" in data [
+      #v(4pt)
+
+      #section-title(data.coreSkills.title)
+
+      #for skill in data.coreSkills.skills [
+        - #skill
+      ]
+    ]
+
+    #if "coreTechnologies" in data [
+      #v(4pt)
+
+      #section-title(data.coreTechnologies.title)
+
+      #for technology in data.coreTechnologies.technologies [
+        - #technology
+      ]
+    ]
   ],
 
   [

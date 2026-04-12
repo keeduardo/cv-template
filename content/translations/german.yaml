@@ -16,12 +16,20 @@ language:
       proficiency: Muttersprache
     - name: Gemeinsprache
       proficiency: Fließend (C1)
-profile:
-  title: Profil
-  text: Erfahrener Wissenshüter mit jahrtausendealter Erfahrung in der Bewahrung
-    antiker Schriften, arkaner Kartographie und interreichlicher Diplomatie.
-    Leidenschaftlich engagiert für die Wahrung der Integrität historischer
-    Aufzeichnungen über alle Zeitalter hinweg.
+coreSkills:
+  title: Kernkompetenzen
+  skills:
+    - Bewahrung und Katalogisierung antiker Schriften
+    - Arkane Kartographie und Geländeanalyse
+    - Interreichliche Diplomatie und Verhandlungsführung
+    - Übersetzung und Interpretation elfischer Sprachen
+coreTechnologies:
+  title: Kerntechnologien
+  technologies:
+    - Elfentinte
+    - Mithril-Kompass
+    - Palantír-Bildgebung
+    - Númenórisches Pergament
 workExperience:
   title: Berufserfahrung
   companies:
