@@ -202,7 +202,7 @@
       #section-title(data.coreTechnologies.title)
 
       #for technology in data.coreTechnologies.technologies [
-        - #task
+        - #technology
       ]
     ]
 
