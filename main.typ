@@ -248,7 +248,11 @@
       #grid(
         columns: (25%, 75%),
         gutter: 10pt,
-        style-date(step.from) + [ \- ] + style-date(step.to),
+        if "to" in step [
+          #style-date(step.from) \- #style-date(step.to)
+        ] else [
+          #style-date(step.from)
+        ],
         [ *#step.title* ]
         + (if "institutionNewline" in step and step.institutionNewline { [ \ ] } else { [ \- ] })
         + step.institution
@@ -262,6 +266,8 @@
           - #project
         ]
       ]
+
+      #v(4pt)
     ]
   ],
 )
