@@ -52,10 +52,12 @@ education:
     institution: College of Celoneth
     grading: 'Note: 1,20'
     projects:
-      - Erstellung einer vergleichenden Analyse der Elbensprachen des Dritten
-        Zeitalters auf Basis von über 200 Primärquellen.
-      - Rekonstruktion einer verlorenen Karte der Beleriand-Küste anhand
-        fragmentierter númenórischer Seefahrtskarten.
+      - title: Vergleichende Analyse der Elbensprachen
+        description: Erstellung einer vergleichenden Analyse der Elbensprachen
+          des Dritten Zeitalters auf Basis von über 200 Primärquellen.
+      - title: Rekonstruktion der Beleriand-Küstenkarte
+        description: Rekonstruktion einer verlorenen Karte der Beleriand-Küste
+          anhand fragmentierter númenórischer Seefahrtskarten.
   - from: 09/2010
     to: 07/2014
     title: Bachelor of History, Ältere Zeitalter

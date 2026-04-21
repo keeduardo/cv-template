@@ -83,9 +83,20 @@ properties:
           type: string
         institution:
           type: string
+        institutionNewline:
+          type: boolean
         grading:
           type: string
         projects:
           type: array
           items:
-            type: string
+            type: object
+            required: [title]
+            additionalProperties: false
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+              link:
+                type: string
