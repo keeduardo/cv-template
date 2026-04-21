@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+        
+      - name: Compile CVs
+        run: ./compile.sh
+        
+      - name: Prepare Pages Artifact
+        run: |
+          mkdir public
+          cp dist/*.pdf public/
+          # Create a simple index.html for navigation
+          echo "<html><body><h1>CV Downloads</h1><ul>" > public/index.html
+          for f in public/*.pdf; do
+            filename=$(basename "$f")
+            echo "<li><a href='$filename'>$filename</a></li>" >> public/index.html
+          done
+          echo "</ul></body></html>" >> public/index.html
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
