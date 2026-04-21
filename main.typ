@@ -15,7 +15,7 @@
       #h(1fr)
       #text(fill: gray)[
         #link("https://github.com/" + profile.githubName + "/cv/releases")[
-          #labels.downloadCv GitHub
+          #labels.downloadCv GitHubWithIcon
         ]
       ]
     ]
@@ -34,20 +34,20 @@
 
 #show link: underline
 
-#show "GitHub": name => box[
+#show "GitHubWithIcon": _ => box[
   #box(image(
     "icons/github.svg",
     height: 0.7em,
   ))
-  #name
+  GitHub
 ]
 
-#show "LinkedIn": name => box[
+#show "LinkedInWithIcon": _ => box[
   #box(image(
     "icons/linkedin.svg",
     height: 0.7em,
   ))
-  #name
+  LinkedIn
 ]
 
 #let primaryColor = rgb(50, 110, 180)
@@ -133,7 +133,7 @@
     #section-title(labels.social)
 
     #if "linkedInName" in profile [
-      *LinkedIn* \
+      *LinkedInWithIcon* \
       #link("https://www.linkedin.com/in/" + profile.linkedInName)[
         #profile.fullName
       ]
@@ -141,7 +141,7 @@
     ]
 
     #if "githubName" in profile [
-      *GitHub* \
+      *GitHubWithIcon* \
       #link("https://github.com/" + profile.githubName)[
         #profile.githubName
       ]
